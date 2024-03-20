@@ -10,7 +10,6 @@ import psycopg2
 class ZohoCRM():
     def __init__(
         self,
-        redshift_conn_id:str,
         zoho_token_user:str,
         fields:str,
         replace_dtypes:dict ={
@@ -21,14 +20,6 @@ class ZohoCRM():
     ):
         super().__init__(task_id = task_id, *args, **kwargs)
         self.task_id= task_id
-        self.table_name= table_name
-        self.task_id= task_id
-        self.schema= schema
-        self.aws_bucket_name= aws_bucket_name
-        self.s3_key=s3_key
-        self.aws_conn_id= aws_conn_id
-        self.path = path
-        self.redshift_conn_id=redshift_conn_id
         self.replace_dtypes=replace_dtypes
         self.zoho_token_user = zoho_token_user
         self.fields = fields
